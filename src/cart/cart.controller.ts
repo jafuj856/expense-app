@@ -54,7 +54,7 @@ payment(@Request() req){
  return this.paymentservi.paymentServise(user)
   // return this.paymentService.createPaymentLink(total)
 
-}
+} 
    
 @Get('paymentdetailse')
 paymentDetailse(@Res({passthrough:true}) res){
