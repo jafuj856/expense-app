@@ -56,14 +56,14 @@ payment(@Request() req){
 
 } 
    
-@Get('paymentdetailse')
-paymentDetailse(@Res({passthrough:true}) res){
- const user:string = res.req.query.session_id
- console.log(user)
+// @Get('paymentdetailse')
+// paymentDetailse(@Res({passthrough:true}) res){
+//  const user:string = res.req.query.session_id
+//  console.log(user)
 
-   return this.paymentService.successPayment(user)
+//    return this.paymentService.successPayment(user)
 
-}
+// }
      
   }
 

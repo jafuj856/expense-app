@@ -5,7 +5,7 @@ const stripe = require('stripe')('sk_test_51NxngeSD7xImSfAUrmwLtsKlOfScMohYf1MPL
 export class PaymentService {
   async createPaymentLink(total) {
 
-      console.log(total)
+     
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -34,16 +34,16 @@ export class PaymentService {
     
   }
 
-  async successPayment(session_id:any){
-      const billingDetailse = await stripe.checkout.sessions.listLineItems(
-        session_id,
-        {limit:5}
+//   async successPayment(session_id:any){
+//       const billingDetailse = await stripe.checkout.sessions.listLineItems(
+//         session_id,
+//         {limit:5}
         
-      );
+//       );
 
-      const session = await stripe.checkout.sessions.retrieve(session_id)
-      return billingDetailse;
-  }
+//       const session = await stripe.checkout.sessions.retrieve(session_id)
+//       return billingDetailse;
+//   }
 
 }
 
